@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frog Match 🐸</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Frog Match 🐸</h1>
+
+    <div class="controls">
+        <label>
+            Theme:
+            <select id="theme">
+                <option value="emoji" selected>Emoji 🐸</option>
+                <option value="animals">Animals 🦊</option>
+                <option value="fruit">Fruit 🍓</option>
+                <option value="faces">Faces 😀</option>
+            </select>
+        </label>
+
+        <label>
+            Level:
+            <select id="level"></select>
+        </label>
+        <span class="stat">Matches: <span id="score">0 / 0</span></span>
+
+        <button id="newGame" type="button">New Game</button>
+    </div>
+
+    <div id="board"></div>
+    <div id="status">&nbsp;</div>
+
+    <div id="timer">
+        <div class="timer-col">
+            <span class="timer-row">Time: <span id="timeNow">0:00</span></span>
+            <span class="timer-row">Best: <span id="timeBest">--:--</span></span>
+        </div>
+        <div class="timer-col">
+            <span class="timer-row">Picks: <span id="picksNow">0</span></span>
+            <span class="timer-row">Best: <span id="picksBest">--</span></span>
+        </div>
+    </div>
+
+    <div id="winBanner" hidden>
+        <div class="winner-card">
+            <h2 id="winText">You Win! 🎉</h2>
+            <button id="nextLevel" type="button">Next Level</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
